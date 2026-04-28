@@ -1,128 +1,227 @@
-# Veri Yapıları Ödevi  
-## Arama ve Sıralama Algoritmaları
+Veri Yapıları Ödevi
+Arama ve Sıralama Algoritmaları
 
-## Proje Hakkında
+Proje Bilgileri
+Ders: Veri Yapıları
+Teslim Eden Öğrenci: Şevval
+Teslim Tarihi: 20.04.2026
 
-Bu proje, Veri Yapıları dersi kapsamında hazırlanmıştır.  
-Amaç, temel arama ve sıralama algoritmalarını öğrenmek, Python dili ile kodlamak ve çalışma mantıklarını anlamaktır.
+Proje Hakkında
+Bu proje, Veri Yapıları dersi kapsamında hazırlanmıştır. Projede temel arama ve sıralama algoritmaları Python programlama dili kullanılarak geliştirilmiştir.
+Bu ödevin temel amacı, algoritmaların nasıl çalıştığını öğrenmek, farklı yöntemleri karşılaştırmak ve performans açısından değerlendirmektir. Ayrıca diziler ve listeler üzerinde işlem yapma becerisi geliştirilmiştir.
+Bu proje sayesinde:
 
-Bu projede hem algoritmaların kodları yazılmış hem de zaman karmaşıklıkları incelenmiştir.
 
----
+Arama algoritmaları uygulanmıştır
 
-## Kullanılan Programlama Dili
 
-- Python
+Sıralama algoritmaları uygulanmıştır
 
----
 
-## Kullanılan Algoritmalar
+Algoritmaların çalışma mantığı incelenmiştir
 
-### Arama Algoritmaları
 
-- Linear Search
-- Binary Search
+Big-O zaman karmaşıklıkları öğrenilmiştir
 
-### Sıralama Algoritmaları
 
-- Bubble Sort
-- Selection Sort
-- Insertion Sort
-- Merge Sort
-- Quick Sort
+Python ile fonksiyon kullanımı geliştirilmiştir
 
----
 
-# Arama Algoritmaları
 
-## 1. Linear Search
+Kullanılan Algoritmalar
+Arama Algoritmaları
 
-Listedeki elemanlar baştan sona tek tek kontrol edilir.  
-Aranan değer bulunduğunda indeks numarası döndürülür.
 
-### Örnek:
+Linear Search
 
-```python
-[4, 7, 2, 9]
-Aranan = 2
-Sonuç = 2
-Zaman Karmaşıklığı:
-Best Case: O(1)
-Worst Case: O(n)
-2. Binary Search
 
-Sadece sıralı listelerde çalışır.
-Liste ortadan ikiye bölünerek arama yapılır.
+Binary Search
 
-Örnek:
-[1, 3, 5, 7, 9]
-Aranan = 7
-Sonuç = 3
-Zaman Karmaşıklığı:
-O(log n)
+
 Sıralama Algoritmaları
-1. Bubble Sort
 
-Yan yana elemanlar karşılaştırılır. Büyük olan sağ tarafa geçer.
 
-Örnek:
-[5,2,1]
-Sonuç = [1,2,5]
-Zaman Karmaşıklığı:
-O(n²)
-2. Selection Sort
+Bubble Sort
 
-Her turda en küçük eleman bulunur ve başa alınır.
 
-Zaman Karmaşıklığı:
-O(n²)
-3. Insertion Sort
+Selection Sort
 
-Elemanlar tek tek uygun yere yerleştirilir.
 
-Zaman Karmaşıklığı:
-O(n²)
-4. Merge Sort
+Insertion Sort
 
-Liste parçalara ayrılır, sıralanır ve birleştirilir.
 
-Zaman Karmaşıklığı:
-O(n log n)
-5. Quick Sort
+Merge Sort
 
-Bir pivot seçilir. Küçükler sola, büyükler sağa ayrılır.
 
-Zaman Karmaşıklığı:
-Ortalama O(n log n)
-Algoritmaların Karşılaştırılması
-Algoritma	Tür	Zaman Karmaşıklığı
-Linear Search	Arama	O(n)
-Binary Search	Arama	O(log n)
-Bubble Sort	Sıralama	O(n²)
-Selection Sort	Sıralama	O(n²)
-Insertion Sort	Sıralama	O(n²)
-Merge Sort	Sıralama	O(n log n)
-Quick Sort	Sıralama	O(n log n)
+Quick Sort
+
+
+
 Dosya Yapısı
 veri-yapilari-odev-arama-siralama/
-│── main.py
-│── arama.py
-│── siralama.py
-│── README.md
+main.py
+arama.py
+siralama.py
+README.md
+
+Arama Algoritmaları
+1. Linear Search
+Linear Search algoritması, listedeki elemanları baştan sona tek tek kontrol eder. Aranan değer bulunana kadar listedeki tüm elemanlar sırayla incelenir. Eğer aranan değer bulunursa bulunduğu indeks numarası döndürülür. Eğer listede yoksa -1 değeri döndürülür.
+Bu yöntem en temel arama algoritmalarından biridir. Küçük veri kümelerinde kullanımı kolaydır ve sıralı liste gerektirmez.
+Avantajları
+
+
+Kodlaması kolaydır
+
+
+Sıralı liste gerektirmez
+
+
+Küçük verilerde etkilidir
+
+
+Dezavantajları
+
+
+Büyük listelerde yavaş çalışır
+
+
+Her eleman tek tek kontrol edilir
+
+
+
+2. Binary Search
+Binary Search algoritması yalnızca sıralı listelerde kullanılabilir. Arama işlemi sırasında listenin ortasındaki eleman kontrol edilir. Eğer aranan değer ortadaki eleman ise sonuç bulunur. Eğer aranan değer büyükse sağ tarafa, küçükse sol tarafa geçilir.
+Bu işlem liste her adımda ikiye bölündüğü için oldukça hızlıdır.
+Avantajları
+
+
+Çok hızlı çalışır
+
+
+Büyük veri kümelerinde etkilidir
+
+
+Dezavantajları
+
+
+Liste sıralı olmak zorundadır
+
+
+Önce sıralama işlemi gerekebilir
+
+
+
+Sıralama Algoritmaları
+1. Bubble Sort
+Bubble Sort algoritmasında yan yana bulunan elemanlar karşılaştırılır. Soldaki eleman büyükse yer değiştirme işlemi yapılır. Her tur sonunda en büyük eleman listenin sonuna geçer.
+Avantajları
+
+
+Öğrenmesi kolaydır
+
+
+Basit mantığa sahiptir
+
+
+Dezavantajları
+
+
+Büyük listelerde yavaştır
+
+
+Çok fazla karşılaştırma yapar
+
+
+
+2. Selection Sort
+Selection Sort algoritmasında her turda listedeki en küçük eleman bulunur ve listenin başına alınır. Daha sonra kalan elemanlar için aynı işlem devam eder.
+Avantajları
+
+
+Kod yapısı basittir
+
+
+Bellek kullanımı düşüktür
+
+
+Dezavantajları
+
+
+Büyük listelerde yavaştır
+
+
+Sabit sayıda çok karşılaştırma yapar
+
+
+
+3. Insertion Sort
+Insertion Sort algoritmasında elemanlar tek tek alınır ve doğru konuma yerleştirilir. Kart dizer gibi çalışır. Küçük veri kümelerinde oldukça kullanışlıdır.
+Avantajları
+
+
+Küçük listelerde hızlıdır
+
+
+Kısmen sıralı listelerde başarılıdır
+
+
+Dezavantajları
+
+
+Büyük listelerde performansı düşer
+
+
+
+4. Merge Sort
+Merge Sort algoritmasında liste iki parçaya ayrılır. Her parça kendi içinde sıralanır ve daha sonra birleştirilir. Böl ve yönet mantığıyla çalışan güçlü algoritmalardan biridir.
+Avantajları
+
+
+Büyük veri kümelerinde hızlıdır
+
+
+Her durumda kararlı performans verir
+
+
+Dezavantajları
+
+
+Ek bellek kullanır
+
+
+Kod yapısı diğerlerine göre daha uzundur
+
+
+
+5. Quick Sort
+Quick Sort algoritmasında bir pivot eleman seçilir. Pivot değerinden küçük olanlar sola, büyük olanlar sağa alınır. Daha sonra alt listelerde aynı işlem tekrar edilir.
+Avantajları
+
+
+Genellikle çok hızlıdır
+
+
+Büyük verilerde başarılıdır
+
+
+Dezavantajları
+
+
+Kötü pivot seçimi performansı düşürür
+
+
+
+Algoritmaların Karşılaştırılması
+AlgoritmaTürOrtalama KarmaşıklıkEn Kötü DurumLinear SearchAramaO(n)O(n)Binary SearchAramaO(log n)O(log n)Bubble SortSıralamaO(n²)O(n²)Selection SortSıralamaO(n²)O(n²)Insertion SortSıralamaO(n²)O(n²)Merge SortSıralamaO(n log n)O(n log n)Quick SortSıralamaO(n log n)O(n²)
+
+Big-O Zaman Karmaşıklıkları Tablosu
+AlgoritmaEn İyi DurumOrtalama DurumEn Kötü DurumLinear SearchO(1)O(n)O(n)Binary SearchO(1)O(log n)O(log n)Bubble SortO(n)O(n²)O(n²)Selection SortO(n²)O(n²)O(n²)Insertion SortO(n)O(n²)O(n²)Merge SortO(n log n)O(n log n)O(n log n)Quick SortO(n log n)O(n log n)O(n²)
+
 Programı Çalıştırma
+Terminal veya komut istemcisi açılır. Proje klasörüne girilir. Daha sonra aşağıdaki komut çalıştırılır.
 python main.py
-Örnek Çıktı
-Liste: [5,2,8,1,3]
 
-Bubble Sort:
-[1,2,3,5,8]
-
-Linear Search (8):
-2
-
-Binary Search (3):
-2
 Sonuç
-
-Bu projede temel arama ve sıralama algoritmaları başarıyla uygulanmıştır.
-Algoritmaların mantığı öğrenilmiş ve performans farkları incelenmiştir.
+Bu projede temel arama ve sıralama algoritmaları başarıyla uygulanmıştır. Algoritmaların çalışma mantıkları öğrenilmiş, farklı yöntemlerin performansları karşılaştırılmış ve Big-O zaman karmaşıklıkları incelenmiştir.
+Bu çalışma sayesinde algoritma mantığı, problem çözme becerisi ve Python programlama pratiği geliştirilmiştir.
